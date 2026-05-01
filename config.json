@@ -20,11 +20,35 @@
     "serial_baud": 115200
   },
   "schema": {
-    "mqtt_broker": "str",
-    "mqtt_port": "int",
-    "mqtt_user": "str",
-    "mqtt_password": "str",
-    "serial_port": "str",
-    "serial_baud": "int"
+    "mqtt_broker": {
+      "description": "MQTT broker hostname or IP address",
+      "type": "string",
+      "default": "core-mosquitto"
+    },
+    "mqtt_port": {
+      "description": "MQTT broker port",
+      "type": "integer",
+      "default": 1883
+    },
+    "mqtt_user": {
+      "description": "MQTT username (optional)",
+      "type": "string",
+      "default": ""
+    },
+    "mqtt_password": {
+      "description": "MQTT password (optional)",
+      "type": "string",
+      "default": ""
+    },
+    "serial_port": {
+      "description": "Serial device path (e.g., /dev/ttyUSB0)",
+      "type": "string",
+      "default": "/dev/ttyUSB0"
+    },
+    "serial_baud": {
+      "description": "Serial baud rate",
+      "type": "integer",
+      "default": 115200
+    }
   }
 }
